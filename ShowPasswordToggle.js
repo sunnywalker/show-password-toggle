@@ -2,7 +2,7 @@
  * ShowPasswordToggle.js
  * Vanilla JavaScript web component for adding a show/hide checkbox toggle to display/hide password field contents.
  *
- * @version 2023-11-22
+ * @version 1.0.0 (2023-11-22)
  * @author Sunny Walker, swalker@hawaii.edu, University of Hawaiʻi at Hilo, http://hilo.hawaii.edu/
  * @license GNU LGPL
  */
@@ -47,7 +47,7 @@ class ShowPasswordToggle extends HTMLElement {
     wrapper.innerHTML = `<label${this.label_class}${this.lang}><input type="checkbox">${this.label}</label>`;
     // show a pie chart if min-length
     if (this.min_length > 0) {
-      wrapper.insertAdjacentHTML('beforeend', `<span class="min-length"></span>`);
+      wrapper.insertAdjacentHTML('beforeend', `<span class="min-length"${this.lang}></span>`);
       this.min = wrapper.querySelector('.min-length');
     }
     // add directly following the input
