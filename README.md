@@ -15,18 +15,17 @@ Vanilla JavaScript web component that adds a checkbox to show/hide the value of 
 Import the custom element and wrap your password inputs.
 
 ```html
-&lt;!-- import the custom element --&gt;
-&lt;script type="module" src="ShowPasswordToggle.js"&gt;&lt;/script&gt;
+<script type="module" src="ShowPasswordToggle.js"></script>
 
-&lt;!-- wrap password inputs in custom element --&gt;
-&lt;show-password-toggle&gt;
-  &lt;input type=&quot;password&quot; name=&quot;…&quot; id=&quot;…&quot;&gt;
-&lt;/show-password-toggle&gt;
+<!-- wrap password inputs in custom element -->
+<show-password-toggle>
+  <input type="password" name="…" id="…">
+</show-password-toggle>
 
-&lt;!-- add optional attributes to the custom element --&gt;
-&lt;show-password-toggle label=&quot;Show/Hide&quot; label-class=&quot;inline&quot; min-length=&quot;12&quot;&gt;
-  &lt;input type=&quot;password&quot; name=&quot;…&quot; id=&quot;…&quot; pattern=&quot;.{12,}&quot;&gt;
-&lt;/show-password-toggle&gt;
+<!-- add optional attributes to the custom element -->
+<show-password-toggle label="Show/Hide" label-class="inline" min-length="12">
+  <input type="password" name="…" id="…" pattern=".{12,}">
+</show-password-toggle>
 ```
 
 ## Options
