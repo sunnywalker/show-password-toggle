@@ -1,0 +1,25 @@
+{
+  "name": "show-password-toggle",
+  "version": "1.0.0",
+  "description": "Web Component to add show/hide password functionality.",
+  "main": "ShowPasswordToggle.js",
+  "scripts": {
+    "start": "npx http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnywalker/show-password-toggle.git"
+  },
+  "keywords": [
+    "web",
+    "components",
+    "password"
+  ],
+  "author": "Sunny Walker <swalker@hawaii.edu> (https://www.miraclesalad.com/)",
+  "license": "GLU LGPL 3.0",
+  "bugs": {
+    "url": "https://github.com/sunnywalker/show-password-toggle/issues"
+  },
+  "homepage": "https://github.com/sunnywalker/show-password-toggle#readme"
+}
