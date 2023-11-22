@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowPasswordToggle Web Component Demo</title>
+    <style>
+        /* all of this styling is for the demo and not necessary for the component */
+        input[type="text"], input[type="password"], input[type="email"] { border: 1px solid #ccc; border-radius: 3px; font-size: inherit; padding: 0.25rem; }
+        input:invalid { border-color: red; }
+        input:valid { border-color: green; }
+        label:not(.inline) { display: block; }
+        .min-length { display: block; margin-top: 3px; }
+        .row { display: flex; flex-flow: row wrap; gap: 1em; }
+        .row > p { margin: 0; }
+        .show-password-toggle-svg { height: 1em; margin-bottom: -.1em; width: 1em; }
+        @media (prefers-color-scheme: dark) {
+            :root { background-color: #111; color: #ddd; }
+            input { color-scheme: dark; }
+            .show-password-toggle-svg-bg { fill: #555; }
+            .show-password-toggle-svg-bg.is-valid { fill: #6c6; }
+            .show-password-toggle-svg-fg { fill: #f33; }
+        }
+    </style>
+    <script type="module" src="ShowPasswordToggle.js"></script>
+</head>
+<body>
+    <h1>ShowPasswordToggle Web Component Demo</h1>
+    <form method="post" class="row">
+        <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" value="test@example.com">
+        </p>
+        <p>
+            <label for="password0">Password:</label>
+            <show-password-toggle>
+                <input type="password" name="password" id="password0" required>
+            </show-password-toggle>
+        </p>
+        <p>
+            <label for="password1">ʻŌlelo huna:</label>
+            <show-password-toggle label="Hōʻike/Hoʻohūnā" lang="haw" label-class="inline" min-length="12" min-length-label="He ### a ʻoi huapalapala">
+                <input type="password" name="password" id="password1" pattern=".{12,}" required>
+            </show-password-toggle>
+        </p>
+    </form>
+</body>
+</html>
